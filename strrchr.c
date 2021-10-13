@@ -12,7 +12,7 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == c)
-			j = i;
+		j = i;
 	if (j != -1)
 		return ((char *) &s[j]);
 	return (0);

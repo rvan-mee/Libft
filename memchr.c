@@ -6,7 +6,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	search;
 	size_t			i;
 
-	str = (unsigned char*) s;
+	str = (unsigned char *) s;
 	search = (unsigned char) c;
 	i = 0;
 	while (str[i] && i < n)
