@@ -1,5 +1,5 @@
-libft.a: isalpha.o isdigit.o isalnum.o isascii.o isprint.o strlen.o bzero.o memcpy.o memmove.o strlcpy.o strlcat.o toupper.o tolower.o strchr.o strrchr.o strncmp.o memchr.o memcmp.o strnstr.o atoi.o calloc.o strdup.o substr.o strjoin.o strtrim.o
-	ar rcs libft.a isalpha.o isdigit.o isalnum.o isascii.o isprint.o strlen.o bzero.o memcpy.o memmove.o strlcpy.o strlcat.o toupper.o tolower.o strchr.o strrchr.o strncmp.o memchr.o memcmp.o strnstr.o atoi.o calloc.o strdup.o substr.o strjoin.o strtrim.o
+libft.a: isalpha.o isdigit.o isalnum.o isascii.o isprint.o strlen.o bzero.o memcpy.o memmove.o strlcpy.o strlcat.o toupper.o tolower.o strchr.o strrchr.o strncmp.o memchr.o memcmp.o strnstr.o atoi.o calloc.o strdup.o substr.o strjoin.o strtrim.o split.o memset.o
+	ar rcs libft.a isalpha.o isdigit.o isalnum.o isascii.o isprint.o strlen.o bzero.o memcpy.o memmove.o strlcpy.o strlcat.o toupper.o tolower.o strchr.o strrchr.o strncmp.o memchr.o memcmp.o strnstr.o atoi.o calloc.o strdup.o substr.o strjoin.o strtrim.o split.o memset.o
 
 isalpha.o: isalpha.c
 	gcc -Wall -Werror -Wextra -std=c99 -c isalpha.c
@@ -27,6 +27,9 @@ memcpy.o: memcpy.c
 
 memmove.o: memmove.c
 	gcc -Wall -Werror -Wextra -std=c99 -c memmove.c
+
+memset.o: memset.c
+	gcc -Wall -Werror -Wextra -std=c99 -c memset.c
 
 strlcpy.o: strlcpy.c
 	gcc -Wall -Werror -Wextra -std=c99 -c strlcpy.c
@@ -75,6 +78,9 @@ strjoin.o: strjoin.c
 
 strtrim.o: strtrim.c
 	gcc -Wall -Werror -Wextra -std=c99 -c strtrim.c
+
+split.o: split.c
+	gcc -Wall -Werror -Wextra -std=c99 -c split.c
 
 clean:
 	rm *.o
