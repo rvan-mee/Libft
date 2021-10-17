@@ -1,18 +1,5 @@
 #include "libft.h"
 
-int	sizecheck(int n)
-{
-	int	i;
-
-	i = 1;
-	while (n > 9)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
-}
-
 char	itoahelper(int	n)
 {
 	char	c;
@@ -32,7 +19,7 @@ void	recursive(long int n, int *i, char *str)
 	*i += 1;
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char		*str;
 	int			neg;
@@ -48,7 +35,7 @@ char *ft_itoa(int n)
 		neg++;
 		i++;
 	}
-	str = malloc(sizeof(char) * sizecheck(j) + neg + 1);
+	str = malloc(sizeof(char) * intlength(j) + neg + 1);
 	if (str == 0)
 		return (0);
 	if (neg == 1)
