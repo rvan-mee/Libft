@@ -8,8 +8,7 @@ int	ft_atoi(const char *nptr)
 
 	c = 0;
 	value = 1;
-	while (*nptr != '\0' && (*nptr == '\t' || *nptr == '\v' || *nptr == '\f'
-			|| *nptr == '\r' || *nptr == '\n' || *nptr == ' '))
+	while (*nptr != '\0' && ft_isspace(*nptr))
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
 	{
