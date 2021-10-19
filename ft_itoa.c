@@ -1,21 +1,11 @@
 #include "libft.h"
 
-char	itoahelper(int	n)
-{
-	char	c;
-
-	while (n > 9)
-		n /= 10;
-	c = n + 48;
-	return (c);
-}
-
-void	recursive(long int n, int *i, char *str)
+void	recursive(long n, int *i, char *str)
 {
 	if (n > 9)
 		recursive(n / 10, i, str);
 	n %= 10;
-	str[*i] = itoahelper(n);
+	str[*i] = n + 48;
 	*i += 1;
 }
 
@@ -24,7 +14,7 @@ char	*ft_itoa(int n)
 	char		*str;
 	int			neg;
 	int			i;
-	long int	j;
+	long		j;
 
 	i = 0;
 	neg = 0;

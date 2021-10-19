@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	intlength(int n)
+int	intlength(long n)
 {
 	int	i;
 
