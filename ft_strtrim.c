@@ -23,9 +23,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s1++;
 	if (*s1 == '\0')
 		return (ft_strdup(""));
-	while (s1[i] != '\0')
-		i++;
-	i--;
+	i = ft_strlen(s1) - 1;
 	while (checkstr(&s1[i], set))
 		i--;
 	a = malloc((i + 2) * sizeof(char));
