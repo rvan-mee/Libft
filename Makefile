@@ -60,14 +60,14 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(BNS_OBJ) $(OBJ)
+bonus: $(BNS_OBJ)
 	ar rcs $(NAME) $(OBJ) $(BNS_OBJ)
 
 clean:
-	rm *.o
+	rm -f *.o
 
-fclean:	clean
-	rm -fr libft.a
+fclean: clean
+	rm -f libft.a
 
 re: clean fclean bonus fclean
 
