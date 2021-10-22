@@ -60,7 +60,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(BNS_OBJ)
+bonus: $(BNS_OBJ) $(OBJ)
 	ar rcs $(NAME) $(OBJ) $(BNS_OBJ)
 
 clean:
@@ -69,6 +69,6 @@ clean:
 fclean: clean
 	rm -f libft.a
 
-re: clean fclean bonus fclean
+re: fclean all
 
 .PHONY:	all bonus clean fclean re
