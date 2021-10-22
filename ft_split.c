@@ -42,8 +42,11 @@ char	*strchop(char *s, char c, int *k)
 
 void	FreeAll(char **str, int i)
 {
-	while (--i >= 0)
+	while (i > 0)
+	{
+		i--;
 		free(str[i]);
+	}
 	free(str);
 }
 
@@ -56,13 +59,13 @@ char	**ft_split(char const *s, char c)
 
 	if (!(s))
 		return (0);
-	i = -1;
+	i = 0;
 	k = 0;
 	stringcount = countstr((char *)s, c);
 	str = malloc((stringcount + 1) * sizeof(char *));
 	if (str == 0)
 		return (0);
-	while (++i != stringcount)
+	while (i != stringcount)
 	{
 		str[i] = strchop((char *)s, c, &k);
 		if (str[i] == 0)
@@ -70,6 +73,7 @@ char	**ft_split(char const *s, char c)
 			FreeAll(str, i);
 			return (0);
 		}
+		i++;
 	}
 	str[i] = 0;
 	return (str);

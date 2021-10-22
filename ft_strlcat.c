@@ -17,7 +17,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst += i;
 	while (*src && dstsize - 1 - i > 0)
 	{
-		ft_memcpy(dst++, src++, 1);
+		ft_memcpy(dst, src, 1);
+		dst++;
+		src++;
 		dstsize--;
 	}
 	*dst = 0;
