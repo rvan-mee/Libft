@@ -1,14 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_lstlast_bonus.c                                 :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: rvan-mee <rvan-mee@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/03/05 13:12:10 by rvan-mee      #+#    #+#                 */
+/*   Updated: 2022/03/05 13:12:11 by rvan-mee      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = ft_lstsize(lst);
-	while (i - 1 > 0)
-	{
+	if (!lst)
+		return (0);
+	while (lst->next)
 		lst = lst->next;
-		i--;
-	}
 	return (lst);
 }

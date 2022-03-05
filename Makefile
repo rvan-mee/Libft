@@ -51,7 +51,7 @@ BNS_OBJ = $(BNS:.c=.o)
 
 OBJ = $(SRC:.c=.o)
 
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 CC = gcc
 
