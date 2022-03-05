@@ -6,7 +6,7 @@
 /*   By: rvan-mee <rvan-mee@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/05 13:12:41 by rvan-mee      #+#    #+#                 */
-/*   Updated: 2022/03/05 13:12:42 by rvan-mee      ########   odam.nl         */
+/*   Updated: 2022/03/05 13:16:02 by rvan-mee      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*strchop(char *s, char c, int *k)
 	return (str);
 }
 
-void	FreeAll(char **str, int i)
+void	freeall(char **str, int i)
 {
 	while (i > 0)
 	{
