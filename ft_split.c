@@ -6,7 +6,7 @@
 /*   By: rvan-mee <rvan-mee@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/05 13:12:41 by rvan-mee      #+#    #+#                 */
-/*   Updated: 2022/03/05 13:16:02 by rvan-mee      ########   odam.nl         */
+/*   Updated: 2022/03/05 13:56:17 by rvan-mee      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	**ft_split(char const *s, char c)
 		str[i] = strchop((char *)s, c, &k);
 		if (str[i] == 0)
 		{
-			FreeAll(str, i);
+			freeall(str, i);
 			return (0);
 		}
 		i++;
