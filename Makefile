@@ -47,7 +47,7 @@ BNS = 	ft_lstadd_back_bonus.c	\
 
 NAME = libft.a
 
-BNS_OBJ = $(BNS:.c=.o)
+BNS_OBJ = $(BNS:_bonus.c=_bonus.o)
 
 OBJ = $(SRC:.c=.o)
 
@@ -55,16 +55,18 @@ CFLAGS = -Wall -Wextra -Werror
 
 CC = gcc
 
-all: $(NAME)
+all: $(NAME)($(OBJ))
 
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+bonus: $(NAME)($(OBJ)) $(NAME)($(BNS_OBJ))
 
-bonus: $(BNS_OBJ) $(OBJ)
-	ar rcs $(NAME) $(OBJ) $(BNS_OBJ)
+%.o: %.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): %.o
+	ar rcs $(NAME) $<
 
 clean:
-	rm -f *.o
+	rm -f $(OBJ) $(BNS_OBJ)
 
 fclean: clean
 	rm -f libft.a
